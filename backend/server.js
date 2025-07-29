@@ -3,8 +3,8 @@ const fs = require('fs');
 const app = require('./app');
 
 const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/aircotedivoirevirtuel.com/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/aircotedivoirevirtuel.com/fullchain.pem')
+  key: fs.readFileSync(process.env.SSL_KEY_PATH),
+  cert: fs.readFileSync(process.env.SSL_CERT_PATH)
 };
 
 const normalizePort = val => {
