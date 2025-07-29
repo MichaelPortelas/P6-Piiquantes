@@ -1,3 +1,41 @@
-/node_modules
-/images
+# Node modules
+node_modules/
+
+# Environment variables
 .env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime files
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage directory used by testing tools
+coverage/
+
+# VS Code settings
+.vscode/
+
+# Build outputs (si tu en as)
+dist/
+build/
+
+# Optional npm cache directory
+.npm/
+
+# Debug output
+debug.log
+
+# Certificats SSL (si jamais tu les copies localement)
+*.pem
