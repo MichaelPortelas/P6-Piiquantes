@@ -3,8 +3,8 @@ const fs = require('fs');
 const app = require('./app');
 
 const options = {
-  key: fs.readFileSync(process.env.SSL_KEY_PATH),
-  cert: fs.readFileSync(process.env.SSL_CERT_PATH)
+  key: fs.readFileSync(process.env.SSL_KEY_PATH || 'your_file_key'),
+  cert: fs.readFileSync(process.env.SSL_CERT_PATH || 'your_file_key')
 };
 
 const normalizePort = val => {
@@ -19,7 +19,7 @@ const normalizePort = val => {
   return false;
 };
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 const errorHandler = error => {
